@@ -1,7 +1,7 @@
-input_value = input ("Hey user give me a number of days and i will convert it to hours!\n")
+input_value = input ("Hey user give me a number of days and i will convert it to milliseconds!\n")
 
 def day_to_hours(value):
-    print(f"{value} days is {value * 24} hours!")
+    print(f"{value} days is {value * 24* 60*60* 100} hours!")
 
 
 def negative_check(negative_input):

@@ -1,5 +1,5 @@
 import random
-random_number = random.randint(1,100)
+random_number = random.randint(1,20)
 number_of_attempts = 0
 while True:
  try:
