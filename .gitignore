@@ -1,1 +1,5 @@
+/gitignore
+gitstatus
 .history/
+.vscode/
+__pycache__/

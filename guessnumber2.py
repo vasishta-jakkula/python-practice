@@ -9,6 +9,9 @@ while True:
     if number_of_attempts == 7:
        print("too many attempts rerun the program!")
        break
+    if input_value < 0:
+       print("No negatives allowed")
+       continue 
     if input_value == random_number:
         print("you guessed it!")
         break
