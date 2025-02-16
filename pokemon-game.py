@@ -1,7 +1,10 @@
+
+pikachu = {"name":"pikachu","type":"electric","damage":7,"health":30}
+eevee = {"name":"eevee","type":"normal","damage":7,"health":30}
 def choosing():
     input_pick = input("pick a thing to do,(type number)\n1. go to pokedex to pick pokemon\n2. check your rank\n3. fight/play\n")
     if input_pick == "1":
-        print("h")
+        print(f"{pikachu}\n\n{eevee}")
     elif input_pick == "2":
         print("h")
     elif input_pick == "3":
@@ -16,6 +19,3 @@ while True:
         print('retrying now')
     else:
         print("invalid")
-
-pikachu = {"type":"electric","damage":7,"health":30}
-eevee = {"type":"normal","damage":7,"health":30}
