@@ -39,5 +39,7 @@ if input_battle_1 == "1":
     print(f"you attacked {random_pokemon}")
 if input_battle_1 == "2":
     print(f"you defended your pokemon,{user_pokemon}.")
+    {user_pokemon.__add__["defense":"1"]}
+    print(user_pokemon)
 if input_battle_1 == "3":
     print("#SPECIAL MOVE CODE NEEDED")
