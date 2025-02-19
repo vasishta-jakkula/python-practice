@@ -30,6 +30,7 @@ if user_pokemon_name in pokedex:
         print(f"got your opponent is {opponent_pokemon_name}\n")
     elif input_continue == "no":
         print("you said no. So I stop")
+        quit()
     else:
         print("invalid try again")
 
@@ -42,7 +43,7 @@ while True:
         print(f"you attacked {opponent_pokemon_name}")
 
     #defense mechanics
-    if input_battle_1 == "2":
+    elif input_battle_1 == "2":
         user_pokemon_value = pokedex[user_pokemon_name]
         print(f"you defended your pokemon,{user_pokemon_value}.")
         user_pokemon_value["defense"] = user_pokemon_value["defense"] + 1
@@ -50,7 +51,9 @@ while True:
         print(f"{opponent_pokemon_name}will now go.")
 
     #special move mechanics
-    if input_battle_1 == "3":
+    elif input_battle_1 == "3":
         print("#SPECIAL MOVE CODE NEEDED")
     # when battle is won or lost, print message
-    #explore for a account type of approach
+    #explore for a account type of approach 
+    else:
+         print("invalid response")
