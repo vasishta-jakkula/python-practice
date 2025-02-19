@@ -10,4 +10,5 @@ print(name.isdigit())
 print(name.isupper())
 print(name.upper())
 print(names.keys())
-print(names.values("v"))
+print(names.values())
+
