@@ -11,4 +11,3 @@ print(name.isupper())
 print(name.upper())
 print(names.keys())
 print(names.values())
-

@@ -1,3 +1,4 @@
+village_made = False
 print("welcome to minecraft!\n")
 #for name check
 while True:
@@ -15,6 +16,11 @@ input1 = input("would you like to make an village here if so type 1\n If you wan
 if input1 == 1:
     input_village_name = input("starting settlement, what will you call it?")
     input_village_name_check = input_village_name
+    if len(input_village_name_check) == 0:
+        print("you village has no letters, try again.")
+    else:
+      print(f"you created a new village,{input_village_name}")
+      village_made = True
 if input1 == 2:
     print("h")
 if input1 == 3:
