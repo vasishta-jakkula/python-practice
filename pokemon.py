@@ -6,6 +6,10 @@ pokedex = {
       "squirtle" : {"health": 25,"type":"water","damage": 11,"special_effect":"water-gush","defense":0},
       "eevee" : {"health": 30, "type":"special", "damage": 11, "special_effect":"peek-a-boo!","defense":0},
 }
+inventory = {
+      "health_charm" : 1,
+      "strength_charm" : 0
+}
 for key in pokedex.keys():
     print(f"{key}:{pokedex[key]}\n")
 #add weaknesses and special moves later
@@ -37,7 +41,7 @@ if user_pokemon_name in pokedex:
     else:
         print("invalid try again")
 
-    input_battle_1 = input(f"you chose {user_pokemon_name} as your pokemon in battle, what would you like to do?(type the number)\n 1. attack\n 2. Defense\n 3. Lucky shot(has a chance to do special effect)\n")
+    input_battle_1 = input(f"you chose {user_pokemon_name} as your pokemon in battle, what would you like to do?(type the number)\n 1. attack\n 2. Defense\n 3. check items for a bonus \n")
         #player battle
             
         #damage mechanic
@@ -47,6 +51,8 @@ if user_pokemon_name in pokedex:
             print(f"you attacked {opponent_pokemon_name}")
             opponent_pokemon_value = pokedex[opponent_pokemon_name]
             opponent_pokemon_value["health"] = opponent_pokemon_value["health"] - user_pokemon_value["damage"]
+            if opponent_pokemon_value["defense"] > 2:
+                  print("your opponent has maximum defense, you made it zero")
             print(f"your opponent,{opponent_pokemon_name}, has {opponent_pokemon_value['health']} left ")
             print(f"{opponent_pokemon_name} will now go.")
             
@@ -58,10 +64,7 @@ if user_pokemon_name in pokedex:
             print(f"your defense level is {user_pokemon_value['defense']}")
             print(f"{opponent_pokemon_name} will now go.")
 
-        #special move mechanics
-    elif input_battle_1 == "3":
-            print("#SPECIAL MOVE CODE NEEDED")
-        # when battle is won or lost, print message
-        #explore for a account type of approach 
+    elif input_battle_1 == 3:
+          print("")
     else:
             print("invalid response")
