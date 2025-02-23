@@ -47,6 +47,7 @@ if user_pokemon_name in pokedex:
             print(f"you attacked {opponent_pokemon_name}")
             opponent_pokemon_value = pokedex[opponent_pokemon_name]
             opponent_pokemon_value["health"] = opponent_pokemon_value["health"] - user_pokemon_value["damage"]
+            print(f"your opponent,{opponent_pokemon_name}, has {opponent_pokemon_value['health']} left ")
             print(f"{opponent_pokemon_name} will now go.")
             
         

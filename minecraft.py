@@ -1,4 +1,4 @@
-from random import *
+import random
 village_made = False
 exploration_level = 0
 village_level = 0
@@ -45,27 +45,102 @@ if input1 == "2":
             if random_resources == 1:
                 wood = wood + 4
                 stone = stone +6
-            if random_resources == 2:
+            elif random_resources == 2:
                 wood = wood + 3
                 stone = stone + 4
-            if random_resources == 3:
+            elif random_resources == 3:
                 wood = wood + 2
                 stone = stone + 8
-            if random_resources == 4:
+            elif random_resources == 4:
                 wood = wood + 5
                 stone = stone +3
-            if random_resources == 5:
+            elif random_resources == 5:
                 wood = wood + 5
                 stone = stone + 5
+            print("your resources are gathered")
         if exploration_level == 1:
             print("you can only gather wood,stone,and gold")
+            random_resources = random.randint(1,5)
+            if random_resources == 1:
+                wood = wood + 4
+                stone = stone +6
+            elif random_resources == 2:
+                wood = wood + 3
+                stone = stone + 4
+            elif random_resources == 3:
+                wood = wood + 2
+                stone = stone + 8
+            elif random_resources == 4:
+                wood = wood + 5
+                stone = stone +3
+            elif random_resources == 5:
+                wood = wood + 5
+                stone = stone + 5
         if exploration_level == 2:
             print("you can only gather wood,stone,gold, and emeralds")
+            random_resources = random.randint(1,5)
+            if random_resources == 1:
+                wood = wood + 4
+                stone = stone +6
+                gold = gold +1
+            elif random_resources == 2:
+                wood = wood + 2
+                stone = stone + 4
+                gold = gold +2
+                emeralds = emeralds + 2
+            elif random_resources == 3:
+                wood = wood + 2
+                stone = stone + 8
+                gold = gold + 0
+                emeralds = emeralds + 3
+            elif random_resources == 4:
+                wood = wood + 5
+                stone = stone +3
+                gold = gold + 3
+                emeralds = emeralds + 1
+            elif random_resources == 5:
+                wood = wood + 5
+                stone = stone + 5
+                gold = gold + 1
+                emeralds =  emeralds + 3
         if exploration_level == 3:
             print("you can only gather wood,stone,gold,emeralds, and diamonds")
-        
-        
+            random_resources = random.randint(1,5)
 
+            if random_resources == 1:
+                wood = wood + 10
+                stone = stone +8
+                gold = gold +3
+                diamonds= diamonds + 1
+                emeralds = emeralds + 3
+
+            elif random_resources == 2:
+                wood = wood + 9 
+                stone = stone + 11
+                gold = gold +4
+                diamonds = diamonds + 3
+                emeralds = emeralds + 5 
+
+            elif random_resources == 3:
+                wood = wood + 7
+                stone = stone + 8
+                gold = gold + 5
+                emeralds = emeralds + 3
+                diamonds = diamonds + 2
+
+            elif random_resources == 4:
+                wood = wood + 7
+                stone = stone +5
+                gold = gold + 8
+                emeralds = emeralds + 9
+                diamonds = diamonds + 4
+
+            elif random_resources == 5:
+                wood = wood + 5
+                stone = stone + 5
+                gold = gold + 4
+                emeralds =  emeralds + 7
+                diamonds = diamonds + 3
 
 if input1 == "3":
         print("h")
