@@ -23,7 +23,7 @@ while True:
         break
 print(f"Your name is {input_name}")
 print("you have a wooden sword, and wooden pick in you inventory.\n")
-input1 = input("would you like to make an village here if so type 1\n If you want to gather materials type 2\n if you want to check inventory type 3\n if you quit type 4\n")
+input1 = input("would you like to make an village here if so type 1\n If you want to gather materials type 2\n if you quit type 3\n")
 
     #village make
 if input1 == "1":
@@ -142,10 +142,8 @@ if input1 == "2":
                 emeralds =  emeralds + 7
                 diamonds = diamonds + 3
 
-if input1 == "3":
-        print("h")
-
-
-if input1 == "4":
+elif input1 == "3":
         print("we will now quit the program")
         quit()
+
+print("")

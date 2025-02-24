@@ -53,18 +53,19 @@ if user_pokemon_name in pokedex:
             opponent_pokemon_value["health"] = opponent_pokemon_value["health"] - user_pokemon_value["damage"]
             if opponent_pokemon_value["defense"] > 2:
                   print("your opponent has maximum defense, you made it zero")
-            print(f"your opponent,{opponent_pokemon_name}, has {opponent_pokemon_value['health']} left ")
-            print(f"{opponent_pokemon_name} will now go.")
+            print(f"your opponent,{opponent_pokemon_name}, has {opponent_pokemon_value['health']} left \n")
+            print(f"{opponent_pokemon_name} will now go.\n")
             
         
         #defense mechanics
     elif input_battle_1 == "2":
             print(f"you defended your pokemon,{user_pokemon_value}.")
             user_pokemon_value["defense"] = user_pokemon_value["defense"] + 1
-            print(f"your defense level is {user_pokemon_value['defense']}")
-            print(f"{opponent_pokemon_name} will now go.")
+            print(f"your defense level is {user_pokemon_value['defense']}\n")
+            print(f"{opponent_pokemon_name} will now go.\n")
 
     elif input_battle_1 == "3":
-          print(f"your inventory is composed of the following,{inventory}")
+          print(f"your inventory is composed of the following,\n{inventory}\n")
+          print("# section in the works try again")
     else:
             print("invalid response")
