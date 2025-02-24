@@ -64,7 +64,7 @@ if user_pokemon_name in pokedex:
             print(f"your defense level is {user_pokemon_value['defense']}")
             print(f"{opponent_pokemon_name} will now go.")
 
-    elif input_battle_1 == 3:
-          print("")
+    elif input_battle_1 == "3":
+          print(f"your inventory is composed of the following,{inventory}")
     else:
             print("invalid response")
