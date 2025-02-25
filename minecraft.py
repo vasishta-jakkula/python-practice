@@ -3,6 +3,8 @@ village_made = False
 exploration_level = 0
 village_level = 0
 crafting_level = 0
+crafting_table = 0
+village_npc_num = 0
 wood = 0
 food = 0
 stone = 0
@@ -11,6 +13,7 @@ emeralds = 0
 gold = 0
 
 print("welcome to minecraft!\n")
+print("current update (1.0: The begining!)\n")
 #for name check
 while True:
     input_name = input("what will be you name?(must be less than 10 letters)\n")
@@ -27,7 +30,7 @@ input1 = input("would you like to make an village here if so type 1\n If you wan
 
     #village make
 if input1 == "1":
-        input_village_name = input("starting settlement, what will you call it?")
+        input_village_name = input("starting settlement, what will you call it?\n")
         input_village_name_check = input_village_name
         if len(input_village_name_check) == 0:
             print("you village has no letters, try again.")
@@ -146,4 +149,31 @@ elif input1 == "3":
         print("we will now quit the program")
         quit()
 
-print("")
+print("You have begun!")
+input2 = input("what will you do? 1. village settings, 2. explore, 3. craft")
+
+if input2 == "1":
+    print("let's check if you have a village first")
+    if village_made == True:
+        print("you have a village! Lets check it out")
+    elif village_made == False:
+        print("you dont have a village let's make one!")
+        input_village_name = input("starting settlement, what will you call it?\n")
+        input_village_name_check = input_village_name
+        if len(input_village_name_check) == 0:
+            print("you village has no letters, try again.\n")
+        else:
+            print(f"you created a new village,{input_village_name}\n")
+            village_made = True
+            village_level = village_level + 1
+    
+    input_village_choices = input(" what will you do? 1. check settings, 2. upgrade village, 3. collect NPC's for jobs\n")
+    if input_village_choices == 1:
+        print(f"lets check settings\n")
+        input_village_settings = input("pick one of 3 settings, 1. check status, 2. remove village, 3. leave settings")
+
+if input2 == "2":
+    print("#in progress")
+
+if input2 == "3":
+    print('in progress')
