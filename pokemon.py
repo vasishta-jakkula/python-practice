@@ -21,7 +21,7 @@ if user_pokemon_name in pokedex:
       print(f"stats of {user_pokemon_name} are {pokemon_stats}")
 else:
         print("invalid registry of pokemon")
-    
+opponent_attack = ""
 user_pokemon_value = pokedex[user_pokemon_name]
 opponent_pokemon_name = ""
 opponent_pokemon_value = {}
@@ -55,6 +55,13 @@ if user_pokemon_name in pokedex:
                   print("your opponent has maximum defense, you made it zero")
             print(f"your opponent,{opponent_pokemon_name}, has {opponent_pokemon_value['health']} left \n")
             print(f"{opponent_pokemon_name} will now go.\n")
+            opponent_attack = random.randint(1,3)
+            if opponent_attack == 1:
+                  opponent_pokemon_value["defense"] = opponent_pokemon_value["defense"] + 1
+                  print(f"your opponent has {opponent_pokemon_value['defense']} defense level now")
+            if opponent_attack == 2:
+                  user_pokemon_value['health'] = opponent_pokemon_value["damage"] - user_pokemon_value["health"]
+                  print(f"your {opponent_pokemon_name} has attacked you you have now {user_pokemon_value['health']}")
             
         
         #defense mechanics
@@ -63,6 +70,16 @@ if user_pokemon_name in pokedex:
             user_pokemon_value["defense"] = user_pokemon_value["defense"] + 1
             print(f"your defense level is {user_pokemon_value['defense']}\n")
             print(f"{opponent_pokemon_name} will now go.\n")
+            opponent_attack = random.randint(1,3)
+            if opponent_attack == 1:
+                  opponent_pokemon_value["defense"] = opponent_pokemon_value["defense"] + 1
+                  print(f"your opponent has {opponent_pokemon_value['defense']} defense level now")
+            if opponent_attack == 2:
+                  user_pokemon_value['health'] = opponent_pokemon_value["damage"] - user_pokemon_value["health"]
+                  print(f"your {opponent_pokemon_name} has attacked you you have now {user_pokemon_value['health']}")
+                  
+                  
+
 
     elif input_battle_1 == "3":
           print(f"your inventory is composed of the following,\n{inventory}\n")
