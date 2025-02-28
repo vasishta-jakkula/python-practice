@@ -62,6 +62,8 @@ if user_pokemon_name in pokedex:
             if opponent_attack == 2:
                   user_pokemon_value['health'] = opponent_pokemon_value["damage"] - user_pokemon_value["health"]
                   print(f"your {opponent_pokemon_name} has attacked you you have now {user_pokemon_value['health']}")
+            if opponent_attack == 3:
+                  print(f"{opponent_pokemon_name}")
             
         
         #defense mechanics
