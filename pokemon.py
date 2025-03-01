@@ -51,8 +51,9 @@ if user_pokemon_name in pokedex:
             print(f"you attacked {opponent_pokemon_name}")
             opponent_pokemon_value = pokedex[opponent_pokemon_name]
             opponent_pokemon_value["health"] = opponent_pokemon_value["health"] - user_pokemon_value["damage"]
-            if opponent_pokemon_value["defense"] > 2:
-                  print("your opponent has maximum defense, you made it zero")
+            if opponent_pokemon_value["health"] == 0:
+                  print("you won, congrats")
+                  quit()
             print(f"your opponent,{opponent_pokemon_name}, has {opponent_pokemon_value['health']} left \n")
             print(f"{opponent_pokemon_name} will now go.\n")
             opponent_attack = random.randint(1,3)
@@ -62,8 +63,6 @@ if user_pokemon_name in pokedex:
             if opponent_attack == 2:
                   user_pokemon_value['health'] = opponent_pokemon_value["damage"] - user_pokemon_value["health"]
                   print(f"your {opponent_pokemon_name} has attacked you you have now {user_pokemon_value['health']}")
-            if opponent_attack == 3:
-                  print(f"{opponent_pokemon_name}")
             
         
         #defense mechanics
@@ -77,7 +76,7 @@ if user_pokemon_name in pokedex:
                   opponent_pokemon_value["defense"] = opponent_pokemon_value["defense"] + 1
                   print(f"your opponent has {opponent_pokemon_value['defense']} defense level now")
             if opponent_attack == 2:
-                  user_pokemon_value['health'] = opponent_pokemon_value["damage"] - user_pokemon_value["health"]
+                  user_pokemon_value['health'] = user_pokemon_value["health"]-opponent_pokemon_value["damage"]
                   print(f"your {opponent_pokemon_name} has attacked you you have now {user_pokemon_value['health']}")
                   
                   
