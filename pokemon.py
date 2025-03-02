@@ -3,10 +3,10 @@ import random
 shop_pokemon = ""
 money = 10
 pokedex = {
-      "pikachu" : {"health": 30, "type": "electric", "damage": 10,"special_effect":"electric ball", "defense":0},
-      "charizard" : {"health": 30, "type": "fire", "damage": 9,"special_effect":"fire-spin","defense":0},
-      "squirtle" : {"health": 25,"type":"water","damage": 11,"special_effect":"water-gush","defense":0},
-      "eevee" : {"health": 30, "type":"special", "damage": 11, "special_effect":"peek-a-boo!","defense":0},
+      "pikachu" : {"health": 30, "type": "electric", "damage": 10,"defense":0},
+      "charizard" : {"health": 30, "type": "fire", "damage": 9,"defense":0},
+      "squirtle" : {"health": 25,"type":"water","damage": 11,"defense":0},
+      "eevee" : {"health": 30, "type":"special", "damage": 11,"defense":0},
 }
 inventory = {
       "health_charm" : 1,
@@ -21,7 +21,8 @@ start_input = input("(type num) what would you like to do 1. fight 2. buy pokemo
 if start_input == "2":
        print(f"hello welcome to the shop, you may buy pokemon here\n")
        shop_pokemon == {
-              ""
+              "bulbasaur" : {"health": 30, "type": "grass","damage": 12,"defense":0,"price": 25}
+               
        }
 
 
