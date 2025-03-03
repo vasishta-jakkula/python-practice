@@ -15,14 +15,17 @@ inventory = {
 for key in pokedex.keys():
     print(f"{key}:{pokedex[key]}\n")
 #add weaknesses and special moves later
-start_input = input("(type num) what would you like to do 1. fight 2. buy pokemon")
+start_input = input("(type num) what would you like to do 1. fight 2. buy pokemon\n")
 
 #shop
 if start_input == "2":
        print(f"hello welcome to the shop, you may buy pokemon here\n")
        shop_pokemon == {
-              "bulbasaur" : {"health": 30, "type": "grass","damage": 12,"defense":0,"price": 25}
-               
+              "bulbasaur" : {"health": 30, "type": "grass","damage": 12,"defense":0,"price": 25},
+              "scorbunny" : {"health": 30, "type":"fire","damage": 12,"defense":0, "price" : 35},
+              "lobunny"  : {"health": 40,"type":"earth","damage":15,"defense":0,"price": 40},
+              "taillow" : {"health": 27,"type":"flying","damage":8,"defense":0,"price": 15},
+              "litten" : {"health": 35,"type":"fire","damage" : 13,"defense":0,"price": 20}
        }
 
 
