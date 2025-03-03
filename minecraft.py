@@ -168,11 +168,13 @@ if input2 == "1":
             village_level = village_level + 1
     
     input_village_choices = input(" what will you do? 1. check settings, 2. upgrade village, 3. collect NPC's for jobs\n")
-    if input_village_choices == 1:
+    if input_village_choices == "1":
         print(f"lets check settings\n")
         input_village_settings = input("pick one of 3 settings, 1. check status, 2. remove village, 3. leave settings")
         if input_village_settings == "1":
             print(f"your village stats\n the number of npc's in village are {village_npc_num}\n village level is{village_level}\n")
+    if input_village_choices == "2":
+        input_continue_1 = input("are you sure?")
 
 if input2 == "2":
     print("you decided to gather materials")
