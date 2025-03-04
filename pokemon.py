@@ -53,57 +53,60 @@ if start_input == "1":
                   opponent_pokemon_name = list(pokedex.keys())[random_pokemon_index]
                   if opponent_pokemon_name != user_pokemon_name:
                         break
-
-            print(f"got your opponent is {opponent_pokemon_name}\n")
+            print("\n")
+            print(f"your opponent is {opponent_pokemon_name}\n")
       elif input_continue == "no":
             print("you said no. So I stop")
             quit()
       else:
             print("invalid try again")
 
-      input_battle_1 = input(f"you chose {user_pokemon_name} as your pokemon in battle, what would you like to do?(type the number)\n 1. attack\n 2. Defense\n 3. check items for a bonus \n")
-            #player battle
-                  
-            #damage mechanic
 
-      if input_battle_1 == "1":
 
-                  print(f"you attacked {opponent_pokemon_name}")
-                  opponent_pokemon_value = pokedex[opponent_pokemon_name]
-                  opponent_pokemon_value["health"] = opponent_pokemon_value["health"] - user_pokemon_value["damage"]
-                  if opponent_pokemon_value["health"] == 0:
-                        print("you won, congrats")
-                        quit()
-                  print(f"your opponent,{opponent_pokemon_name}, has {opponent_pokemon_value['health']} left \n")
-                  print(f"{opponent_pokemon_name} will now go.\n")
-                  opponent_attack = random.randint(1,3)
-                  if opponent_attack == 1:
-                        opponent_pokemon_value["defense"] = opponent_pokemon_value["defense"] + 1
-                        print(f"your opponent has {opponent_pokemon_value['defense']} defense level now")
-                  if opponent_attack == 2:
-                        user_pokemon_value['health'] = opponent_pokemon_value["damage"] - user_pokemon_value["health"]
-                        print(f"your {opponent_pokemon_name} has attacked you you have now {user_pokemon_value['health']}")
-                  
+
             
-            #defense mechanics
-      elif input_battle_1 == "2":
-                  print(f"you defended your pokemon,{user_pokemon_value}.")
-                  user_pokemon_value["defense"] = user_pokemon_value["defense"] + 1
-                  print(f"your defense level is {user_pokemon_value['defense']}\n")
-                  print(f"{opponent_pokemon_name} will now go.\n")
-                  opponent_attack = random.randint(1,3)
-                  if opponent_attack == 1:
-                        opponent_pokemon_value["defense"] = opponent_pokemon_value["defense"] + 1
-                        print(f"your opponent has {opponent_pokemon_value['defense']} defense level now")
-                  if opponent_attack == 2:
-                        user_pokemon_value['health'] = user_pokemon_value["health"]-opponent_pokemon_value["damage"]
-                        print(f"your {opponent_pokemon_name} has attacked you you have now {user_pokemon_value['health']}")
-                        
-                        
+      while True:
+                  #player battle
+            input_battle_1 = input(f"{user_pokemon_name} is your pokemon in battle, what would you like to do?(type the number)\n 1. attack\n 2. Defense\n")
+                 
+                  #damage mechanic
+            if input_battle_1 == "1":
 
-      # inventory mechanics
-      elif input_battle_1 == "3":
-            print(f"your inventory is composed of the following,\n{inventory}\n")
-            print("# section in the works try again")
-      else:
-                  print("invalid response")
+                        print(f"you attacked {opponent_pokemon_name}")
+                        opponent_pokemon_value = pokedex[opponent_pokemon_name]
+                        opponent_pokemon_value["health"] = opponent_pokemon_value["health"] - user_pokemon_value["damage"]
+                        if opponent_pokemon_value["health"] == 0 or opponent_pokemon_value["health"] < 0:
+                              print("you won, congrats")
+                              break
+                        print(f"your opponent,{opponent_pokemon_name}, has {opponent_pokemon_value['health']} left \n")
+                        print(f"{opponent_pokemon_name} will now go.\n")
+                        opponent_attack = random.randint(1,2)
+                        if opponent_attack == 1:
+                              opponent_pokemon_value["defense"] = opponent_pokemon_value["defense"] + 1
+                              print(f"your opponent has {opponent_pokemon_value['defense']} defense level now")
+                        elif opponent_attack == 2:
+                              user_pokemon_value['health'] = user_pokemon_value["health"] - opponent_pokemon_value["damage"]
+                              print(f"{opponent_pokemon_name} has attacked you have now {user_pokemon_value['health']} health left\n")
+                              if user_pokemon_value["health"] == 0 or user_pokemon_value["health"] < 0:
+                                     print("you have lost")
+                                     break
+                        
+                  
+                  #defense mechanics
+            elif input_battle_1 == "2":
+                        print(f"you defended your pokemon,{user_pokemon_value}.")
+                        user_pokemon_value["defense"] = user_pokemon_value["defense"] + 1
+                        print(f"your defense level is {user_pokemon_value['defense']}\n")
+                        print(f"{opponent_pokemon_name} will now go.\n")
+                        opponent_attack = random.randint(1,3)
+                        if opponent_attack == 1:
+                              opponent_pokemon_value["defense"] = opponent_pokemon_value["defense"] + 1
+                              print(f"your opponent has {opponent_pokemon_value['defense']} defense level now")
+                        elif opponent_attack == 2:
+                              user_pokemon_value['health'] = opponent_pokemon_value["damage"]- user_pokemon_value['health']
+                              print(f"your {opponent_pokemon_name} has attacked you you have now {user_pokemon_value['health']}")
+                              if user_pokemon_value["health"] or user_pokemon_value["health"] < 0== 0:
+                                     print("you have lost")
+                                     break 
+                              else:
+                                    print("you may go now")

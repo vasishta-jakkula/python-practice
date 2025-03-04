@@ -174,7 +174,7 @@ if input2 == "1":
         if input_village_settings == "1":
             print(f"your village stats\n the number of npc's in village are {village_npc_num}\n village level is{village_level}\n")
     if input_village_choices == "2":
-        input_continue_1 = input("are you sure?")
+        input_continue_1 = input("are you sure?(type y or n)")
 
 if input2 == "2":
     print("you decided to gather materials")
