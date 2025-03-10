@@ -123,15 +123,12 @@ if start_input == "1":
 #shop
 if start_input == "2":
        print(f"hello welcome to the shop, you may buy pokemon here\n")
-       shop_pokemon == {
+       shop_pokemon = {
               "bulbasaur" : {"health": 30, "type": "grass","damage": 12,"defense":0,"price": 25},
               "scorbunny" : {"health": 30, "type":"fire","damage": 12,"defense":0, "price" : 35},
               "lobunny"  : {"health": 40,"type":"earth","damage":15,"defense":0,"price": 40},
               "taillow" : {"health": 27,"type":"flying","damage":8,"defense":0,"price": 15},
               "litten" : {"health": 35,"type":"fire","damage" : 13,"defense":0,"price": 20},
               }
-       for shop_keys in shop_pokemon.keys():
-            print(f"{shop_keys}:{shop_pokemon[key]}\n")
-
-
-
+       for shop_key in shop_pokemon.keys():
+        print(f"{shop_key}:{shop_pokemon[shop_key]}\n")
