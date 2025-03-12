@@ -12,8 +12,6 @@ pokedex = {
       "squirtle" : {"health": 25,"type":"water","damage": 11,"defense":0},
       "eevee" : {"health": 30, "type":"special", "damage": 11,"defense":0},
 }
-for key in pokedex.keys():
-    print(f"{key}:{pokedex[key]}\n")
 
 while True:
       start_input = input("(type num) what would you like to do 1. fight 2. buy pokemon\n")
@@ -71,6 +69,8 @@ while True:
                                     opponent_pokemon_value["health"] = opponent_pokemon_value["health"] - user_pokemon_value["damage"]
                               if opponent_pokemon_value["health"] == 0 or opponent_pokemon_value["health"] < 0:
                                     print("you won, congrats")
+                                    money = money + 20
+                                    print(f" you have now {money} dollars")
                                     break
                               print(f"your opponent,{opponent_pokemon_name}, has {opponent_pokemon_value['health']} health left \n")
                               print(f"{opponent_pokemon_name} will now go.\n")
@@ -144,6 +144,8 @@ while True:
                   if bought_pokemon_stats["price"] == money or bought_pokemon_stats["price"] < money:
                         pokedex[bought_pokemon] = bought_pokemon_stats
                         print(f"{bought_pokemon} was added to your pokedex!\n")
+                        money - bought_pokemon_stats["price"]
+                        print(f"you have now {money} dollars")
                   else:
                         print("insuficient money for pokemon!\n")      
               
