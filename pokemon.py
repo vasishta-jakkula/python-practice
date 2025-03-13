@@ -72,13 +72,15 @@ while True:
                                     money = money + 20
                                     print(f" you have now {money} dollars")
                                     break
-                              print(f"your opponent,{opponent_pokemon_name}, has {opponent_pokemon_value['health']} health left \n")
-                              print(f"{opponent_pokemon_name} will now go.\n")
+                              else:
+                                    print(f"your opponent,{opponent_pokemon_name}, has {opponent_pokemon_value['health']} health left \n")
+                                    print(f"{opponent_pokemon_name} will now go.\n")
                               opponent_attack = random.randint(1,2)
                               if opponent_attack == 1:
                                     opponent_pokemon_value["defense"] = opponent_pokemon_value["defense"] + 1
                                     if opponent_pokemon_value["defense"] == 4 or opponent_pokemon_value['defense'] > 4:
                                           opponent_pokemon_value == 4
+                                          print(f"{opponent_pokemon_name} has defense 4\n")
                                     else:
                                           print(f"your opponent has {opponent_pokemon_value['defense']} defense level now")
                               elif opponent_attack == 2:
@@ -103,7 +105,7 @@ while True:
                               else:
                                     print(f"your defense level is {user_pokemon_value['defense']}\n")
                               print(f"{opponent_pokemon_name} will now go.\n")
-                              opponent_attack = random.randint(1,3)
+                              opponent_attack = random.randint(1,2)
                               if opponent_attack == 1:
                                     opponent_pokemon_value["defense"] = opponent_pokemon_value["defense"] + 1
                                     if opponent_pokemon_value["defense"] == 4 or opponent_pokemon_value['defense'] > 4:
