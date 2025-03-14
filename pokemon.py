@@ -9,7 +9,7 @@ inventory = {
 pokedex = {
       "pikachu" : {"health": 30, "type": "electric", "damage": 10,"defense":0},
       "charizard" : {"health": 30, "type": "fire", "damage": 9,"defense":0},
-      "squirtle" : {"health": 25,"type":"water","damage": 11,"defense":0},
+      "squirtle" : {"health": 30,"type":"water","damage": 11,"defense":0},
       "eevee" : {"health": 30, "type":"special", "damage": 11,"defense":0},
 }
 
@@ -71,6 +71,10 @@ while True:
                                     print("you won, congrats")
                                     money = money + 20
                                     print(f" you have now {money} dollars")
+                                    user_pokemon_value['health'] == 30
+                                    opponent_pokemon_value["health"] == 30
+                                    user_pokemon_value["defense"] == 0
+                                    opponent_pokemon_value["defense"] == 0
                                     break
                               else:
                                     print(f"your opponent,{opponent_pokemon_name}, has {opponent_pokemon_value['health']} health left \n")
@@ -92,6 +96,10 @@ while True:
                                           print(f"{opponent_pokemon_name} has attacked you have now {user_pokemon_value['health']} health left\n")
                                     if user_pokemon_value["health"] == 0 or user_pokemon_value["health"] < 0:
                                           print("you have lost")
+                                          user_pokemon_value['health'] == 30
+                                          opponent_pokemon_value["health"] == 30
+                                          user_pokemon_value["defense"] == 0
+                                          opponent_pokemon_value["defense"] == 0
                                           break
                               
                         
@@ -121,6 +129,10 @@ while True:
                                           print(f"your {opponent_pokemon_name} has attacked you you have now {user_pokemon_value['health']}")
                                     if user_pokemon_value["health"] or user_pokemon_value["health"] < 0== 0:
                                           print("you have lost")
+                                          user_pokemon_value['health'] == 30
+                                          opponent_pokemon_value["health"] == 30
+                                          user_pokemon_value["defense"] == 0
+                                          opponent_pokemon_value["defense"] == 0
                                           break 
                                     else:
                                           print("you may go now")
@@ -132,9 +144,9 @@ while True:
             shop_pokemon = {
                   "bulbasaur" : {"health": 30, "type": "grass","damage": 12,"defense":0,"price": 25},
                   "scorbunny" : {"health": 30, "type":"fire","damage": 12,"defense":0, "price" : 35},
-                  "lobunny"  : {"health": 40,"type":"earth","damage":15,"defense":0,"price": 40},
-                  "taillow" : {"health": 27,"type":"flying","damage":8,"defense":0,"price": 15},
-                  "litten" : {"health": 35,"type":"fire","damage" : 13,"defense":0,"price": 20},
+                  "lobunny"  : {"health": 30,"type":"earth","damage":15,"defense":0,"price": 40},
+                  "taillow" : {"health": 30,"type":"flying","damage":8,"defense":0,"price": 15},
+                  "litten" : {"health": 30,"type":"fire","damage" : 13,"defense":0,"price": 20},
                   }
             for shop_key in shop_pokemon.keys():
              print(f"{shop_key}:{shop_pokemon[shop_key]}\n")
