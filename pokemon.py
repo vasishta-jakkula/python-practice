@@ -14,7 +14,7 @@ pokedex = {
 }
 
 while True:
-      start_input = input("(type num) what would you like to do 1. fight 2. buy pokemon\n")
+      start_input = input("(type num) what would you like to do 1. fight 2. buy pokemon or 3. Bosses \n")
 
       #battle
       print("here are your pokemon\n")
@@ -125,7 +125,7 @@ while True:
                                           print(f"You have maximum defense points, {opponent_pokemon_name} did no damage to you")
                                           user_pokemon_value['defense'] == 0
                                     else:
-                                          user_pokemon_value['health'] = opponent_pokemon_value["damage"]- user_pokemon_value['health']
+                                          user_pokemon_value['health'] = opponent_pokemon_value['damage']- user_pokemon_value['health']
                                           print(f"your {opponent_pokemon_name} has attacked you you have now {user_pokemon_value['health']}")
                                     if user_pokemon_value["health"] or user_pokemon_value["health"] < 0== 0:
                                           print("you have lost")
@@ -163,4 +163,20 @@ while True:
                   else:
                         print("insuficient money for pokemon!\n")      
               
-        
+      if start_input == "3":
+            print(" You may battle bosses here ")
+            bosses = {
+                  "Mewtwo" : {"health": 90,"type" : "psychic", "damage" : 15,"defense":0},
+                  "Gigantamax Charizard" : {"health": 140, "type":"fire", "damage": 20,"defense":0 }
+            }
+            input_boss_pick = input("(type num) What boss will you pick?\n 1. Mewtwo \n2. Gigantamax Charizard \n3. Eternatus \n 4. Gym Leaders")
+            if input_boss_pick == "1":
+                  print("You will now fight Mewtwo\n")
+                  
+
+            if input_boss_pick == "2":
+                  pass
+            if input_boss_pick == "3":
+                  pass
+            if input_boss_pick == "4":
+                  pass
