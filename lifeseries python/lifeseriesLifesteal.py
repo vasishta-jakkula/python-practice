@@ -1,6 +1,5 @@
-import random
 print("Welcome to Last Life\n")
-input_player = input("(input the num) 1. Grian, 2.Scar, 3.Jimmy, 4. Cleo, 5. Bdouble, 6. BigB,7.Etho, 8. Mumbo, 9.Gem\n")
+input_player = input("(input the num) 1. ClownPeirce, 2.Mapicc, 3.Branzy, 4.PlanetLo , 5. Redoons, 6.,7.Etho, 8. Mumbo, 9.Gem\n")
 if input_player == "1":
     player = "Grian"
     print(f"You are {player}\n")
@@ -28,8 +27,3 @@ if input_player == "8":
 if input_player == "9":
     player = "Gem"    
     print(f"You are {player}\n")
-
-#game
-lives = 0
-lives = random.randint(3,6)
-print(f"You have {lives} lives\n")
