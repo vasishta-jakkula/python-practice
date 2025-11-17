@@ -1,4 +1,4 @@
-FN = 'Darius-13-100m-Fly.txt'
+FN = 'Darius-13-100m-Fly'
 
 FOLDER='swimdata/'
 
