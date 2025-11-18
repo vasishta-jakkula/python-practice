@@ -1,4 +1,7 @@
 player = ""
+lives = 3
+wood = 0
+stone= 0
 print('Welcome to Third Life\n')
 input_player = input("(input the num) 1. Grian, 2.Scar, 3.Jimmy, 4. Cleo, 5. Bdouble, 6. BigB,7.Etho, 8. Mumbo, 9.Gem\n")
 if input_player == "1":
