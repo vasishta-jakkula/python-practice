@@ -24,6 +24,8 @@ while disaster != True:
         print("game over, retry")
         quit()
     input_player_choice = input(f"(you are {age} years old (Type the num) 1. Age by 1 ,2. check stats, 3. find a job(needs to be 18 age)")
+    if dead == True:
+        quit()
     if input_player_choice == '1':
         print(f"You are now {age} years old, congrats")
         cancer_wheel = random.randint(1,500)
@@ -34,5 +36,14 @@ while disaster != True:
             dead= True
         if age <= 32:
             print(f"A world catastrophe has happened, and it is {Catastophe.disasters}, survive")
+            disaster = True
     if input_player_choice == "2":
         print(f'Here are your stats\nmoney = {money}\nproperties owned{properties}\nage = {age}\ncriminalhistorylevel = {criminal_history_level}\n job = {job}\nsalary = {salary}')
+        
+if dead == True:
+    quit()
+
+while dead != True:
+    
+if dead == True:
+    quit()
